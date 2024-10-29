@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Web Page</title>
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Image Gallery */
+.gallery-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Clip-Path Shapes */
+.clip-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.clip-box {
+    width: 300px;
+    height: 200px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+    margin: 20px auto;
+}
+
+/* Split Background */
+.split-background-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.split-background {
+    height: 400px;
+    background: linear-gradient(to right, #ff6347 50%, rgba(255, 255, 255, 0) 50%),
+                url('background.jpg') right center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Wave Footer */
+footer {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: relative;
+}
+
+.wave-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+footer p {
+    margin-top: 60px;
+    color: #666;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>My Stylish Website</h1>
+        <nav>
+            <a href="#gallery">Gallery</a>
+            <a href="#shapes">Shapes</a>
+            <a href="#split-bg">Split Background</a>
+        </nav>
+    </header>
+
+    <!-- Image Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <h2>Image Gallery</h2>
+        <div class="gallery">
+            <img src="https://imgs.search.brave.com/iKcUFuO1uy-wsBHc8v7NLlUlwJcqFKM5jPE0dUmcG08/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxOS8x/MC8xNC8xNi8yOC93/b21hbi00NTQ5MzI3/XzY0MC5qcGc" alt="Image 1">
+            <img src="https://imgs.search.brave.com/TmMTuTi3VN_Ax6__D-vX-7_gRMVXxcFprLYo_uYpcxA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90aGVz/b2xvZ2xvYmV0cm90/dGVyLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMC8wOC9n/aXJsLTIwNDYzMDBf/MTkyMC0xMjAweDgw/MC5qcGc" alt="Image 2">
+            <img src="https://imgs.search.brave.com/qLmWWZT_a-z5rF54JYdSQRDLwpCAj8HthcbRaFx_pII/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTEz/NDAwMTk2Ni9waG90/by9oYXBweS15b3Vu/Zy13b21hbi1zbWls/aW5nLndlYnA_YT0x/JmI9MSZzPTYxMng2/MTImdz0wJms9MjAm/Yz1iWnMxSHFzR21D/ekhzbkpfeUViVk85/RXh2c1F6ZWt2c3Z4/Z3lOYVRGUlpZPQ" alt="Image 3">
+            <img src="https://imgs.search.brave.com/CTnuyj-oI-hBtzqAb1W3PWPH8azHF-CoUW_nvubwQz0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTI4/OTIyMDU0NS9waG90/by9iZWF1dGlmdWwt/d29tYW4tc21pbGlu/Zy13aXRoLWNyb3Nz/ZWQtYXJtcy5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9cW1P/VGtHc3RLajFxTjB6/UFZXai1uMjhvUkE2/X0JIUU44dVZMSVhn/MFRGOD0" alt="Image 4">
+        </div>
+    </section>
+
+    <!-- Clip-Path Shapes Section -->
+    <section id="shapes" class="clip-section">
+        <h2>Clip-Path Shapes</h2>
+        <div class="clip-box">
+            <p>Custom Shape Box</p>
+        </div>
+    </section>
+
+    <!-- Split Background Section -->
+    <section id="split-bg" class="split-background-section">
+        <h2>Split Background Example</h2>
+        <div class="split-background">
+            <p>Half Color, Half Image Background</p>
+        </div>
+    </section>
+
+    <!-- Wave Footer -->
+    <footer>
+        <div class="wave-container">
+            <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#0099ff" fill-opacity="1" d="M0,160L1440,320L1440,320L0,320Z"></path>
+            </svg>
+        </div>
+        <p>© 2024 Stylish Web. All rights reserved.</p>
+    </footer>
+</body>
+</html>
